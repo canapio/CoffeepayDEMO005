@@ -107,8 +107,8 @@ void Enemy::set_position(){
 	}
 
 	this->enemy_property->sprite_enemy->setPosition(random_x, random_y);
-	this->layercolor_enemy_health->setPosition(mod_random_x + this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
-	this->layercolor_enemy_health_back->setPosition(mod_random_x + this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
+	this->layercolor_enemy_health->setPosition(mod_random_x - this->enemy_property->sprite_enemy->getContentSize().width +this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
+	this->layercolor_enemy_health_back->setPosition(mod_random_x - this->enemy_property->sprite_enemy->getContentSize().width  +this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
 	this->rect_enemy.setRect(mod_random_x, mod_random_y, this -> enemy_property->sprite_enemy->getContentSize().width, this->enemy_property->sprite_enemy->getContentSize().height);
 	
 	this->layercolor_enemy_name_back->setPosition(random_x - this->labelttf_enemy_level_name->getContentSize().width / 2, random_y - 2.5*this->enemy_property->sprite_enemy->getContentSize().height - this->labelttf_enemy_level_name->getContentSize().height / 2);
