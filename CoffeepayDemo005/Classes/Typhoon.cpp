@@ -92,7 +92,6 @@ bool Typhoon::check_hit(Rect input){
 	//this->typhoon_radius;
 	//this->sprite_typhoon->getPosition().x;
 	//this->sprite_typhoon->getPosition().y;
-
 	return input.intersectsCircle(Vec2(this->sprite_typhoon->getPosition().x, this->sprite_typhoon->getPosition().y), this->typhoon_radius);
 
 }
