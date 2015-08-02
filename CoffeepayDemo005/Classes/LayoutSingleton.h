@@ -31,7 +31,7 @@ USING_NS_CC;
 
 
 
-enum { z_order_bg1, z_order_bg2, z_order_enemy_sprite, z_order_typhoon,z_order_enemy_health_back, z_order_enemy_health, z_order_upgrade_ui,z_order_option,z_order_damage};
+enum { z_order_bg1, z_order_bg2, z_order_enemy_sprite, z_order_typhoon,z_order_enemy_health_back, z_order_enemy_health, z_order_upgrade_ui,z_order_option};
 
 
 class LayoutSingleton {

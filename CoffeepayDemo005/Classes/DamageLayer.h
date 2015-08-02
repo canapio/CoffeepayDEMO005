@@ -5,11 +5,9 @@
 USING_NS_CC;
 class DamageLayer :public Layer{
 private:
-	MoveBy* action_damage_move;
-	LabelTTF* label_damage;
-	FadeOut* action_damage_fadeout;
+
 public:
 	static DamageLayer* create();
-	void show_damage(int damage, Enemy* input_en, Layer* input_la);
+	void show_damage(int damage, Enemy* input_en, int delay, Layer* ly);
 };
 #endif
