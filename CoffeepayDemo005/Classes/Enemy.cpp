@@ -12,7 +12,7 @@ Enemy* Enemy::create(int type_number){
 
 	temp_enemy->current_health = temp_enemy->enemy_property->max_health;
 	
-	temp_enemy->hit_number = 0;
+	temp_enemy->hit_number = 20;
 	//
 	temp_enemy->labelttf_enemy_level_name = LabelTTF::create("Lv." + std::to_string(temp_enemy->enemy_property->level) + " " + temp_enemy->enemy_property->name, "fonts/Yoon_Dod_Woom.ttf", 15);
 	temp_enemy->layercolor_enemy_name_back = LayerColor::create(Color4B(255, 255, 255, 60), temp_enemy->labelttf_enemy_level_name->getContentSize().width, temp_enemy->labelttf_enemy_level_name->getContentSize().height);
