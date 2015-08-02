@@ -23,7 +23,7 @@ void UserInfoSingleton::init_values(){
 	typhoon_damage = 2;
 	typhoon_delay = 20;
 	typhoon_velocity = 50.0f;
-	typhoon_radius = SCALEUP_VALUE(22);
+	typhoon_radius = SCALEUP_VALUE(20);
 
 	lv_attack_delay = 0;
 	lv_attack_power = 0;
