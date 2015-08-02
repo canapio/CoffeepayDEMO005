@@ -1,4 +1,6 @@
 #include "GameScene.h"
+#include "TyphoonMovement.h"
+
 
 Scene* GameScene::createScene()
 {
@@ -57,6 +59,10 @@ bool GameScene::init()
 	typhoon = Typhoon::create();
 	typhoon->set_position();
 	this->addChild(typhoon, z_order_typhoon);
+    
+    typhoonMovement = new TyphoonMovement();
+    typhoonMovement->init_with_typhoon(typhoon);
+    
 	
 	enemy_controller = new EnemyController();
 	enemy_controller->set_scene(this);

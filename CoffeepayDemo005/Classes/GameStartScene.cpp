@@ -68,6 +68,11 @@ bool GameStartScene::init()
 
 	this->addChild(background, z_order_bg2);
 	this->addChild(typhoon, z_order_typhoon);
+    
+    
+    
+    
+    
 	return true;
 }
 

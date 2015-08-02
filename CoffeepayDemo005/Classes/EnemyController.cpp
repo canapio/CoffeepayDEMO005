@@ -8,7 +8,7 @@ void EnemyController::add_enemy(){
 		temp->set_position();
 		
 		this->print_enemy(temp);
-		log("%d", vec_enemy.size());
+//		log("%d", vec_enemy.size());
 	}
 
 }

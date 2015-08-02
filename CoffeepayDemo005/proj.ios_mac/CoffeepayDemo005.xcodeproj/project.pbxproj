@@ -128,7 +128,7 @@
 		3662B8F71B6CFAC5006F0A63 /* EnemyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyController.h; sourceTree = "<group>"; };
 		3662B8F81B6CFAC5006F0A63 /* EnemyPropertyDB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyPropertyDB.cpp; sourceTree = "<group>"; };
 		3662B8F91B6CFAC5006F0A63 /* EnemyPropertyDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPropertyDB.h; sourceTree = "<group>"; };
-		3662B8FA1B6CFAC5006F0A63 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		3662B8FA1B6CFAC5006F0A63 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
 		3662B8FB1B6CFAC5006F0A63 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		3662B8FC1B6CFAC5006F0A63 /* GameStartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStartScene.cpp; sourceTree = "<group>"; };
 		3662B8FD1B6CFAC5006F0A63 /* GameStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartScene.h; sourceTree = "<group>"; };
@@ -332,14 +332,14 @@
 				3662B8FF1B6CFAC5006F0A63 /* LayoutSingleton.h */,
 				3662B9001B6CFAC5006F0A63 /* Typhoon.cpp */,
 				3662B9011B6CFAC5006F0A63 /* Typhoon.h */,
+				3662B91C1B6E5CC8006F0A63 /* TyphoonMovement.cpp */,
+				3662B91D1B6E5CC8006F0A63 /* TyphoonMovement.h */,
 				3662B9021B6CFAC5006F0A63 /* UpgradeController.cpp */,
 				3662B9031B6CFAC5006F0A63 /* UpgradeController.h */,
 				3662B9041B6CFAC5006F0A63 /* UpgradeUI.cpp */,
 				3662B9051B6CFAC5006F0A63 /* UpgradeUI.h */,
 				3662B9061B6CFAC5006F0A63 /* UserinfoSingleton.cpp */,
 				3662B9071B6CFAC5006F0A63 /* UserInfoSingleton.h */,
-				3662B91C1B6E5CC8006F0A63 /* TyphoonMovement.cpp */,
-				3662B91D1B6E5CC8006F0A63 /* TyphoonMovement.h */,
 			);
 			name = Classes;
 			path = ../Classes;
