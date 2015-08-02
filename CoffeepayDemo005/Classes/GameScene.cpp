@@ -66,6 +66,10 @@ bool GameScene::init()
 	money_label->setColor(Color3B::YELLOW);
 	this->addChild(money_label, z_order_option);
 	
+	//데미지 화면에 띄우기위에 scene 받는 부분 추가
+	collision_controller = new CollisionController();
+	collision_controller->set_scene(this);
+
 	this->start_schedule();
 	return true;
 }

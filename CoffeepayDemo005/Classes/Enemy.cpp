@@ -74,7 +74,7 @@ LayerColor* Enemy::get_layercolor_name_back(){
 void Enemy::change_layercolor_enemy_health(int damage){
 	float health_float = this->layercolor_enemy_health->getContentSize().width;
 	float max_health_float = this->layercolor_enemy_health_back->getContentSize().width;
-	health_float = health_float - damage * health_float / this->enemy_property->max_health;
+	health_float = health_float - damage * max_health_float / this->enemy_property->max_health;
 	this->layercolor_enemy_health->changeWidth(health_float);
 }
 

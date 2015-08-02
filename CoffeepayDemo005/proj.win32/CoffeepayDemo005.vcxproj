@@ -141,6 +141,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\CollisionController.cpp" />
+    <ClCompile Include="..\Classes\DamageLayer.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyController.cpp" />
     <ClCompile Include="..\Classes\EnemyPropertyDB.cpp" />
@@ -156,6 +157,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\CollisionController.h" />
+    <ClInclude Include="..\Classes\DamageLayer.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyController.h" />
     <ClInclude Include="..\Classes\EnemyPropertyDB.h" />
