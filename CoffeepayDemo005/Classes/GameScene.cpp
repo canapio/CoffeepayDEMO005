@@ -164,6 +164,4 @@ void GameScene::onTouchCancelled(Touch *touch, Event *unused_event) {
 	Point location = target->convertToNodeSpace(touch->getLocation());
 
 	log("touch cancelled %f, %f", location.x, location.y);
-
-
 }
