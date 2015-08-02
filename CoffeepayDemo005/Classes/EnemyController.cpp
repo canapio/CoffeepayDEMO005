@@ -27,6 +27,7 @@ void EnemyController::print_enemy(Enemy* input){
 	scene->addChild(input->get_layercolor_health_back(), z_order_enemy_health_back);
 	scene->addChild(input->get_label_name(), z_order_enemy_health);
 	scene->addChild(input->get_layercolor_name_back(), z_order_enemy_health);
+
 }
 void EnemyController::delete_enemy(Enemy* input){
 	scene->removeChild(input->get_sprite());
@@ -34,6 +35,7 @@ void EnemyController::delete_enemy(Enemy* input){
 	scene->removeChild(input->get_layercolor_health_back());
 	scene->removeChild(input->get_layercolor_name_back());
 	scene->removeChild(input->get_label_name());
+
 	
 }
 cocos2d::Vector<Enemy*>* EnemyController::get_vector(){
