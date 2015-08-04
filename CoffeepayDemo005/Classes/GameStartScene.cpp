@@ -62,7 +62,7 @@ bool GameStartScene::init()
 
 	typhoon = Typhoon::create();
 	typhoon->set_position();
-	typhoon->get_sprite()->setPosition(Point(layout_singleton->scaleup_value(40),layout_singleton->scaleup_value(80)));
+	typhoon->setPosition(Point(layout_singleton->scaleup_value(40),layout_singleton->scaleup_value(80)));
 
 
 
@@ -93,12 +93,12 @@ bool GameStartScene::onTouchBegan(Touch* touch, Event* event) {
 	auto target = event->getCurrentTarget();
 	Point location = target->convertToNodeSpace(touch->getLocation());
 
-	log("touch began %f, %f", location.x, location.y);
+//	log("touch began %f, %f", location.x, location.y);
 	
 	
-	log("%f", typhoon->get_sprite()->getBoundingBox().size.width);
+	//log("%f", typhoon->get_sprite()->getBoundingBox().size.width);
 	
-	if (typhoon->get_sprite()->getBoundingBox().containsPoint(touch->getLocation())){
+	if (typhoon->getBoundingBox().containsPoint(touch->getLocation())){
 		is_typhoon_touched = true;
 		log("touch began typhoon");
 	}
@@ -120,7 +120,7 @@ void GameStartScene::onTouchEnded(Touch *touch, Event *unused_event) {
 
 	log("touch ended %f, %f", location.x, location.y);
 	
-	if (typhoon->get_sprite()->getBoundingBox().containsPoint(touch->getLocation())){
+	if (typhoon->getBoundingBox().containsPoint(touch->getLocation())){
 		if (is_typhoon_touched){
 			log("touch ended typhoon");
 			//auto game_scene = GameScene::createScene();
