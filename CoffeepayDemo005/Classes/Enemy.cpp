@@ -12,7 +12,7 @@ Enemy* Enemy::create(int type_number){
 
 	temp_enemy->current_health = temp_enemy->enemy_property->max_health;
 	
-	temp_enemy->hit_number = 0;
+	temp_enemy->hit_number = 20;
 	//
 	temp_enemy->labelttf_enemy_level_name = LabelTTF::create("Lv." + std::to_string(temp_enemy->enemy_property->level) + " " + temp_enemy->enemy_property->name, "fonts/Yoon_Dod_Woom.ttf", 15);
 	temp_enemy->layercolor_enemy_name_back = LayerColor::create(Color4B(255, 255, 255, 60), temp_enemy->labelttf_enemy_level_name->getContentSize().width, temp_enemy->labelttf_enemy_level_name->getContentSize().height);
@@ -74,7 +74,7 @@ LayerColor* Enemy::get_layercolor_name_back(){
 void Enemy::change_layercolor_enemy_health(int damage){
 	float health_float = this->layercolor_enemy_health->getContentSize().width;
 	float max_health_float = this->layercolor_enemy_health_back->getContentSize().width;
-	health_float = health_float - damage * health_float / this->enemy_property->max_health;
+	health_float = health_float - damage * max_health_float / this->enemy_property->max_health;
 	this->layercolor_enemy_health->changeWidth(health_float);
 }
 
@@ -98,7 +98,7 @@ void Enemy::set_position(){
 		mod_random_y = random_y - this->enemy_property->sprite_enemy->getContentSize().height / 2;
 
 		//업그레이드 버튼에 생성 됬는가
-		if (random_x < SCALEUP_VALUE(55*3 + 5) && random_y < SCALEUP_VALUE(28)){
+		if (random_x < SCALEUP_VALUE(55*3 + 5) && random_y < SCALEUP_VALUE(30)){
 			is_right_position = false;
 		}
 		else{
@@ -106,10 +106,10 @@ void Enemy::set_position(){
 		}
 	}
 
-	this->enemy_property->sprite_enemy->setPosition(random_x, random_y);
+	this->setPosition(random_x, random_y);
 	this->layercolor_enemy_health->setPosition(mod_random_x - this->enemy_property->sprite_enemy->getContentSize().width +this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
 	this->layercolor_enemy_health_back->setPosition(mod_random_x - this->enemy_property->sprite_enemy->getContentSize().width  +this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
-	this->rect_enemy.setRect(mod_random_x, mod_random_y, this -> enemy_property->sprite_enemy->getContentSize().width, this->enemy_property->sprite_enemy->getContentSize().height);
+	this->rect_enemy.setRect(random_x, random_y, this -> enemy_property->sprite_enemy->getContentSize().width, this->enemy_property->sprite_enemy->getContentSize().height);
 	
 	this->layercolor_enemy_name_back->setPosition(random_x - this->labelttf_enemy_level_name->getContentSize().width / 2, random_y - 2.5*this->enemy_property->sprite_enemy->getContentSize().height - this->labelttf_enemy_level_name->getContentSize().height / 2);
 	this->labelttf_enemy_level_name->setPosition(random_x, random_y - 2.5*this->enemy_property->sprite_enemy->getContentSize().height);

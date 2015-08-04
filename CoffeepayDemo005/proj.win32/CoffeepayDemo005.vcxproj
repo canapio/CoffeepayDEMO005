@@ -141,6 +141,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\CollisionController.cpp" />
+    <ClCompile Include="..\Classes\DamageLayer.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnemyController.cpp" />
     <ClCompile Include="..\Classes\EnemyPropertyDB.cpp" />
@@ -148,6 +149,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\GameStartScene.cpp" />
     <ClCompile Include="..\Classes\LayoutSingleton.cpp" />
     <ClCompile Include="..\Classes\Typhoon.cpp" />
+    <ClCompile Include="..\Classes\TyphoonMovement.cpp" />
     <ClCompile Include="..\Classes\UpgradeController.cpp" />
     <ClCompile Include="..\Classes\UpgradeUI.cpp" />
     <ClCompile Include="..\Classes\UserinfoSingleton.cpp" />
@@ -156,6 +158,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\CollisionController.h" />
+    <ClInclude Include="..\Classes\DamageLayer.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnemyController.h" />
     <ClInclude Include="..\Classes\EnemyPropertyDB.h" />
@@ -163,6 +166,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\GameStartScene.h" />
     <ClInclude Include="..\Classes\LayoutSingleton.h" />
     <ClInclude Include="..\Classes\Typhoon.h" />
+    <ClInclude Include="..\Classes\TyphoonMovement.h" />
     <ClInclude Include="..\Classes\UpgradeController.h" />
     <ClInclude Include="..\Classes\UpgradeUI.h" />
     <ClInclude Include="..\Classes\UserInfoSingleton.h" />

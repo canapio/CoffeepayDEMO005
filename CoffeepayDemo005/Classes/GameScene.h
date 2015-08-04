@@ -11,7 +11,7 @@
 USING_NS_CC;
 
 
-
+class TyphoonMovement;
 class GameScene : public cocos2d::Layer{
 
 private:
@@ -21,6 +21,9 @@ private:
 	CollisionController* collision_controller;
 
 	LabelTTF* money_label;
+    
+    
+    TyphoonMovement *typhoonMovement;
 public:
 	static cocos2d::Scene* createScene();
 	virtual bool init();

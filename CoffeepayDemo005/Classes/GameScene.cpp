@@ -1,4 +1,6 @@
 #include "GameScene.h"
+#include "TyphoonMovement.h"
+
 
 Scene* GameScene::createScene()
 {
@@ -57,6 +59,10 @@ bool GameScene::init()
 	typhoon = Typhoon::create();
 	typhoon->set_position();
 	this->addChild(typhoon, z_order_typhoon);
+    
+    typhoonMovement = new TyphoonMovement();
+    typhoonMovement->init_with_typhoon(typhoon);
+    
 	
 	enemy_controller = new EnemyController();
 	enemy_controller->set_scene(this);
@@ -66,6 +72,10 @@ bool GameScene::init()
 	money_label->setColor(Color3B::YELLOW);
 	this->addChild(money_label, z_order_option);
 	
+	//데미지 화면에 띄우기위에 scene 받는 부분 추가
+	collision_controller = new CollisionController();
+	collision_controller->set_scene(this);
+
 	this->start_schedule();
 	return true;
 }
@@ -133,7 +143,7 @@ void GameScene::onTouchMoved(Touch *touch, Event *unused_event) {
 	Point location = target->convertToNodeSpace(touch->getLocation());
 
 	//log("touch moved %f, %f", location.x, location.y);
-
+	
 }
 void GameScene::onTouchEnded(Touch *touch, Event *unused_event) {
 	auto target = unused_event->getCurrentTarget();
@@ -145,13 +155,13 @@ void GameScene::onTouchEnded(Touch *touch, Event *unused_event) {
 	float scale = 2.0;
 	if (location.x < SCALEUP_VALUE(55 * 3 + 5) && location.y < SCALEUP_VALUE(28)){}
 	else{
-		float distance_x = location.x - typhoon->get_sprite()->getPositionX();
-		float distance_y = location.y - typhoon->get_sprite()->getPositionY();
+		float distance_x = location.x - typhoon->getPositionX();
+		float distance_y = location.y - typhoon->getPositionY();
 		float distance = sqrt(pow(distance_x, 2) + pow(distance_y, 2)) / scale;
 		float time = distance / typhoon->get_velocity();
 		auto action = EaseExponentialInOut::create(MoveTo::create(time, Point(location.x, location.y)));
 
-		typhoon->get_sprite()->runAction(action);
+		typhoon->runAction(action);
 	}
 }
 
@@ -160,6 +170,4 @@ void GameScene::onTouchCancelled(Touch *touch, Event *unused_event) {
 	Point location = target->convertToNodeSpace(touch->getLocation());
 
 	log("touch cancelled %f, %f", location.x, location.y);
-
-
 }

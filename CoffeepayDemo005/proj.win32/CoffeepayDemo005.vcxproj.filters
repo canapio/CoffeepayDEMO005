@@ -51,6 +51,12 @@
     <ClCompile Include="..\Classes\UserinfoSingleton.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\DamageLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TyphoonMovement.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -90,6 +96,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\UserInfoSingleton.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DamageLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TyphoonMovement.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

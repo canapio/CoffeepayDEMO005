@@ -25,6 +25,8 @@
 		3662B9121B6CFAC5006F0A63 /* UpgradeUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3662B9041B6CFAC5006F0A63 /* UpgradeUI.cpp */; };
 		3662B9131B6CFAC5006F0A63 /* UserinfoSingleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3662B9061B6CFAC5006F0A63 /* UserinfoSingleton.cpp */; };
 		3662B9151B6CFAF9006F0A63 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3662B9141B6CFAF9006F0A63 /* Images */; };
+		3662B91B1B6DE2C2006F0A63 /* DamageLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3662B9191B6DE2C2006F0A63 /* DamageLayer.cpp */; };
+		3662B91E1B6E5CC8006F0A63 /* TyphoonMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3662B91C1B6E5CC8006F0A63 /* TyphoonMovement.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -126,7 +128,7 @@
 		3662B8F71B6CFAC5006F0A63 /* EnemyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyController.h; sourceTree = "<group>"; };
 		3662B8F81B6CFAC5006F0A63 /* EnemyPropertyDB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyPropertyDB.cpp; sourceTree = "<group>"; };
 		3662B8F91B6CFAC5006F0A63 /* EnemyPropertyDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPropertyDB.h; sourceTree = "<group>"; };
-		3662B8FA1B6CFAC5006F0A63 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		3662B8FA1B6CFAC5006F0A63 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
 		3662B8FB1B6CFAC5006F0A63 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		3662B8FC1B6CFAC5006F0A63 /* GameStartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameStartScene.cpp; sourceTree = "<group>"; };
 		3662B8FD1B6CFAC5006F0A63 /* GameStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartScene.h; sourceTree = "<group>"; };
@@ -141,6 +143,10 @@
 		3662B9061B6CFAC5006F0A63 /* UserinfoSingleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserinfoSingleton.cpp; sourceTree = "<group>"; };
 		3662B9071B6CFAC5006F0A63 /* UserInfoSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoSingleton.h; sourceTree = "<group>"; };
 		3662B9141B6CFAF9006F0A63 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		3662B9191B6DE2C2006F0A63 /* DamageLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DamageLayer.cpp; sourceTree = "<group>"; };
+		3662B91A1B6DE2C2006F0A63 /* DamageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DamageLayer.h; sourceTree = "<group>"; };
+		3662B91C1B6E5CC8006F0A63 /* TyphoonMovement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TyphoonMovement.cpp; sourceTree = "<group>"; };
+		3662B91D1B6E5CC8006F0A63 /* TyphoonMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TyphoonMovement.h; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -310,6 +316,8 @@
 				3662B8F11B6CFAC5006F0A63 /* AppDelegate.h */,
 				3662B8F21B6CFAC5006F0A63 /* CollisionController.cpp */,
 				3662B8F31B6CFAC5006F0A63 /* CollisionController.h */,
+				3662B9191B6DE2C2006F0A63 /* DamageLayer.cpp */,
+				3662B91A1B6DE2C2006F0A63 /* DamageLayer.h */,
 				3662B8F41B6CFAC5006F0A63 /* Enemy.cpp */,
 				3662B8F51B6CFAC5006F0A63 /* Enemy.h */,
 				3662B8F61B6CFAC5006F0A63 /* EnemyController.cpp */,
@@ -324,6 +332,8 @@
 				3662B8FF1B6CFAC5006F0A63 /* LayoutSingleton.h */,
 				3662B9001B6CFAC5006F0A63 /* Typhoon.cpp */,
 				3662B9011B6CFAC5006F0A63 /* Typhoon.h */,
+				3662B91C1B6E5CC8006F0A63 /* TyphoonMovement.cpp */,
+				3662B91D1B6E5CC8006F0A63 /* TyphoonMovement.h */,
 				3662B9021B6CFAC5006F0A63 /* UpgradeController.cpp */,
 				3662B9031B6CFAC5006F0A63 /* UpgradeController.h */,
 				3662B9041B6CFAC5006F0A63 /* UpgradeUI.cpp */,
@@ -543,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3662B91E1B6E5CC8006F0A63 /* TyphoonMovement.cpp in Sources */,
 				3662B9131B6CFAC5006F0A63 /* UserinfoSingleton.cpp in Sources */,
 				3662B90A1B6CFAC5006F0A63 /* Enemy.cpp in Sources */,
 				3662B9091B6CFAC5006F0A63 /* CollisionController.cpp in Sources */,
@@ -555,6 +566,7 @@
 				3662B9121B6CFAC5006F0A63 /* UpgradeUI.cpp in Sources */,
 				3662B90C1B6CFAC5006F0A63 /* EnemyPropertyDB.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				3662B91B1B6DE2C2006F0A63 /* DamageLayer.cpp in Sources */,
 				3662B90D1B6CFAC5006F0A63 /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3662B90E1B6CFAC5006F0A63 /* GameStartScene.cpp in Sources */,
