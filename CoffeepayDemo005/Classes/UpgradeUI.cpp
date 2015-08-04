@@ -68,7 +68,7 @@ void UpgradeUI::check_need_money(){
 	else{
 		attack_power_upgrade_item->setEnabled(true);
 	}
-	if (money < 2){
+	if (money < 2 || UserInfoSingleton::getInstance()->get_delay() < 1){
 		attack_delay_upgrade_item->setEnabled(false);
 	}
 	else{
