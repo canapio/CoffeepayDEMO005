@@ -143,7 +143,7 @@ void GameScene::onTouchMoved(Touch *touch, Event *unused_event) {
 	Point location = target->convertToNodeSpace(touch->getLocation());
 
 	//log("touch moved %f, %f", location.x, location.y);
-
+	
 }
 void GameScene::onTouchEnded(Touch *touch, Event *unused_event) {
 	auto target = unused_event->getCurrentTarget();
@@ -155,13 +155,13 @@ void GameScene::onTouchEnded(Touch *touch, Event *unused_event) {
 	float scale = 2.0;
 	if (location.x > LayoutSingleton::getInstance()->get_original_device_size().width - SCALEUP_VALUE(55)){}
 	else{
-		float distance_x = location.x - typhoon->get_sprite()->getPositionX();
-		float distance_y = location.y - typhoon->get_sprite()->getPositionY();
+		float distance_x = location.x - typhoon->getPositionX();
+		float distance_y = location.y - typhoon->getPositionY();
 		float distance = sqrt(pow(distance_x, 2) + pow(distance_y, 2)) / scale;
 		float time = distance / typhoon->get_velocity();
 		auto action = EaseExponentialInOut::create(MoveTo::create(time, Point(location.x, location.y)));
 
-		typhoon->get_sprite()->runAction(action);
+		typhoon->runAction(action);
 	}
 }
 

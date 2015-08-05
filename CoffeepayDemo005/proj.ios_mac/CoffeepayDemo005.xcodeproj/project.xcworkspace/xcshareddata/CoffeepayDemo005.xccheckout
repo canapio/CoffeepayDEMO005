@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>0A574049-B39D-4699-AE1D-AD6CA6E2E9A5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CoffeepayDemo005</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>99B89A9A52AE2B543E2C39913C1C2787C92A7B15</key>
 		<string>https://github.com/canapio/CoffeepayDEMO005.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CoffeepayDemo005/proj.ios_mac/CoffeepayDemo005.xcodeproj</string>
+	<string>CoffeepayDemo005/proj.ios_mac/CoffeepayDemo005.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>99B89A9A52AE2B543E2C39913C1C2787C92A7B15</key>

@@ -67,15 +67,18 @@ void Typhoon::set_position(){
 
 	int visible_width = LayoutSingleton::getInstance()->get_original_device_size().width;
 	int visible_height = LayoutSingleton::getInstance()->get_original_device_size().height;
-
-	this->sprite_typhoon->setPosition(visible_width / 2, visible_height / 2);
-
 	
+	
+	this->setPosition(visible_width / 2 , visible_height / 2 );
+	this->sprite_typhoon->setPosition(0,0);
+
+	/*
 	bound = LayerColor::create(Color4B(0, 255, 0, 100),
 		SCALEUP_VALUE(sprite_typhoon->getContentSize().width),
 		SCALEUP_VALUE(sprite_typhoon->getContentSize().height));
 	bound->setPosition(visible_width / 2 - SCALEUP_VALUE(sprite_typhoon->getContentSize().width / 2), 
 		visible_height / 2 - SCALEUP_VALUE(sprite_typhoon->getContentSize().height) / 2);
+		*/
 }
 
 void Typhoon::update_status(){
@@ -86,10 +89,15 @@ void Typhoon::update_status(){
 }
 
 bool Typhoon::check_hit(Rect input){
+<<<<<<< HEAD
 	//this->typhoon_radius;
 	//this->sprite_typhoon->getPosition().x;
 	//this->sprite_typhoon->getPosition().y;
 
 	return input.intersectsCircle(Vec2(this->sprite_typhoon->getPosition().x, this->sprite_typhoon->getPosition().y), SCALEUP_VALUE(this->typhoon_radius));
 
+=======
+	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), this->typhoon_radius);
+	//log("x = %f, y = %f", this->getPosition().x, this->getPosition().y);
+>>>>>>> c9eb15515e0e2082bd48dfea103c2af10dffac43
 }
