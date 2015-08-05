@@ -89,15 +89,12 @@ void Typhoon::update_status(){
 }
 
 bool Typhoon::check_hit(Rect input){
-<<<<<<< HEAD
+
 	//this->typhoon_radius;
 	//this->sprite_typhoon->getPosition().x;
 	//this->sprite_typhoon->getPosition().y;
 
-	return input.intersectsCircle(Vec2(this->sprite_typhoon->getPosition().x, this->sprite_typhoon->getPosition().y), SCALEUP_VALUE(this->typhoon_radius));
+	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), SCALEUP_VALUE(this->typhoon_radius));
 
-=======
-	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), this->typhoon_radius);
-	//log("x = %f, y = %f", this->getPosition().x, this->getPosition().y);
->>>>>>> c9eb15515e0e2082bd48dfea103c2af10dffac43
+
 }
