@@ -42,12 +42,6 @@
     <ClCompile Include="..\Classes\Typhoon.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\UpgradeController.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\UpgradeUI.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\UserinfoSingleton.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -55,6 +49,15 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TyphoonMovement.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StoreController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StoreUI.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UpgradeDB.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,12 +92,6 @@
     <ClInclude Include="..\Classes\Typhoon.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\UpgradeController.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\UpgradeUI.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\UserInfoSingleton.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -102,6 +99,15 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TyphoonMovement.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StoreController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StoreUI.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UpgradeDB.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

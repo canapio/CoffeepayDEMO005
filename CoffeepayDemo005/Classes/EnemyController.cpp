@@ -1,15 +1,25 @@
 #include "EnemyController.h"
 //#include "Enemy.h"
 void EnemyController::add_enemy(){
-	int random_number = RandomHelper::random_int(1, 3);
+	int random_number = RandomHelper::random_int(1, 6);
+	random_number = random_number % 4;
+	while (random_number == 0){
+		
+		random_number = RandomHelper::random_int(1, 6);
+		random_number = random_number % 4;
+	}
+
+	
+
 	Enemy* temp = Enemy::create(random_number);
 	if (this->vec_enemy.size() <= 50){
 		this->vec_enemy.pushBack(temp);
 		temp->set_position();
-		
+
 		this->print_enemy(temp);
-//		log("%d", vec_enemy.size());
+		//		log("%d", vec_enemy.size());
 	}
+
 
 }
 void EnemyController::set_scene(Layer* input){

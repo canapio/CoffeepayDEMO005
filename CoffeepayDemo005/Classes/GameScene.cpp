@@ -40,11 +40,11 @@ bool GameScene::init()
 	this->addChild(background_game, z_order_bg1);
 
 	//업그레이드 레이어
-	upgrade_layer = UpgradeUI::create();
-	upgrade_controller = new UpgradeController();
-	upgrade_layer->init_with_controller(upgrade_controller);
-	upgrade_layer->setPosition(10, 10);
-	this->addChild(upgrade_layer,z_order_upgrade_ui);
+	store_layer = StoreUI::create();
+	store_controller = new StoreController();
+	store_layer->init_with_controller(store_controller);
+	store_layer->setPosition(Point(-StoreUI::get_store_width_ingame() + LayoutSingleton::getInstance()->get_original_device_size().width, 0));
+	this->addChild(store_layer,z_order_upgrade_ui);
 
 	//터치 설정
 	EventDispatcher* dispatcher = Director::getInstance()->getEventDispatcher();
@@ -96,7 +96,7 @@ void GameScene::display_new_enemy(float dt){
 }
 
 void GameScene::change_button_enable(float dt){
-	upgrade_layer->check_need_money();
+	store_layer->check_need_money();
 	typhoon->update_status();
 }
 
@@ -153,7 +153,7 @@ void GameScene::onTouchEnded(Touch *touch, Event *unused_event) {
 	
 	log("touch ended %f, %f", location.x, location.y);
 	float scale = 2.0;
-	if (location.x < SCALEUP_VALUE(55 * 3 + 5) && location.y < SCALEUP_VALUE(28)){}
+	if (location.x > LayoutSingleton::getInstance()->get_original_device_size().width - SCALEUP_VALUE(55)){}
 	else{
 		float distance_x = location.x - typhoon->get_sprite()->getPositionX();
 		float distance_y = location.y - typhoon->get_sprite()->getPositionY();

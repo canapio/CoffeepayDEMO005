@@ -5,7 +5,8 @@
 #include "LayoutSingleton.h"
 #include "Typhoon.h"
 #include "EnemyController.h"
-#include "UpgradeUI.h"
+#include "StoreUI.h"
+#include "StoreController.h"
 #include "CollisionController.h"
 
 USING_NS_CC;
@@ -34,9 +35,9 @@ public:
 
 	Sprite* background_game;
 
-	UpgradeUI* upgrade_layer;
-	UpgradeController* upgrade_controller;
-	void init_upgrade_layer();
+	StoreUI* store_layer;
+	StoreController* store_controller;
+	void init_store_layer();
 
 
 	virtual bool onTouchBegan(Touch* touch, cocos2d::Event* event);

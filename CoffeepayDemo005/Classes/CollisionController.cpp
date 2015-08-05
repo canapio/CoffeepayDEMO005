@@ -19,9 +19,11 @@ void CollisionController::check_collision(Typhoon* input_ty, EnemyController* in
 				if (health_changed <= 0){//체력 다 까짐-> 없애라는 함수호출
 
 					UserInfoSingleton::getInstance()->add_money_value(en->get_property()->money);
+					UserInfoSingleton::getInstance()->add_exp(en->get_property()->exp);
 					input_ec->delete_enemy(en);
 					input_ec->get_vector()->eraseObject(en);
 					//input_ec->get_vector()->erase(input_ec->get_vector()->find(en));
+					
 					
 					i--;
 				}

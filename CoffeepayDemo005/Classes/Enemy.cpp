@@ -98,7 +98,7 @@ void Enemy::set_position(){
 		mod_random_y = random_y - this->enemy_property->sprite_enemy->getContentSize().height / 2;
 
 		//업그레이드 버튼에 생성 됬는가
-		if (random_x < SCALEUP_VALUE(55*3 + 5) && random_y < SCALEUP_VALUE(30)){
+		if (random_x > LayoutSingleton::getInstance()->get_original_device_size().width - SCALEUP_VALUE(55)){
 			is_right_position = false;
 		}
 		else{
@@ -109,7 +109,7 @@ void Enemy::set_position(){
 	this->setPosition(random_x, random_y);
 	this->layercolor_enemy_health->setPosition(mod_random_x - this->enemy_property->sprite_enemy->getContentSize().width +this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
 	this->layercolor_enemy_health_back->setPosition(mod_random_x - this->enemy_property->sprite_enemy->getContentSize().width  +this->enemy_property->sprite_enemy->getContentSize().width / 10, random_y + 2 * this->enemy_property->sprite_enemy->getContentSize().height);
-	this->rect_enemy.setRect(random_x, random_y, this -> enemy_property->sprite_enemy->getContentSize().width, this->enemy_property->sprite_enemy->getContentSize().height);
+	this->rect_enemy.setRect(random_x, random_y, this->enemy_property->sprite_enemy->getContentSize().width, this->enemy_property->sprite_enemy->getContentSize().height);
 	
 	this->layercolor_enemy_name_back->setPosition(random_x - this->labelttf_enemy_level_name->getContentSize().width / 2, random_y - 2.5*this->enemy_property->sprite_enemy->getContentSize().height - this->labelttf_enemy_level_name->getContentSize().height / 2);
 	this->labelttf_enemy_level_name->setPosition(random_x, random_y - 2.5*this->enemy_property->sprite_enemy->getContentSize().height);
