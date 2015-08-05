@@ -11,7 +11,7 @@ void CollisionController::check_collision(Typhoon* input_ty, EnemyController* in
 		auto en = input_ec->get_vector()->at(i);
 		if (input_ty->check_hit(en->get_rect())){//ºÎµúÈû
 			en->hit_number++;
-//			log("delay %d", en->hit_number);
+
 			if (delay <= en->hit_number){
 				float health_changed = en->get_current_health() - input_ty->get_damage();
 				/*¿©±â´Ù°¡ Ã¼·Â ±ïÀÌ´Â animation º¸¿©ÁÖ¸éµÊ µ¥¹ÌÁö¶û À§Ä¡ ¹Ş¾Æ¿Í¼­*/
@@ -22,7 +22,7 @@ void CollisionController::check_collision(Typhoon* input_ty, EnemyController* in
 					UserInfoSingleton::getInstance()->add_exp(en->get_property()->exp);
 					input_ec->delete_enemy(en);
 					input_ec->get_vector()->eraseObject(en);
-					//input_ec->get_vector()->erase(input_ec->get_vector()->find(en));
+
 					
 					
 					i--;
