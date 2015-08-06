@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "LayoutSingleton.h"
+#include "UpgradeDB.h"
 
 USING_NS_CC;
 
@@ -23,7 +24,7 @@ private:
 	float typhoon_velocity;
 	int typhoon_delay;
 
-	int lv_attack_power, lv_attack_delay, lv_velocity;
+	
 
 public:
 	static UserInfoSingleton * getInstance();
@@ -66,6 +67,8 @@ public:
 	int get_exp(){
 		return exp;
 	}
+
+	int lv_attack_power, lv_attack_delay, lv_velocity;
 
 };
 

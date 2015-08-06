@@ -17,13 +17,11 @@ void Typhoon::init_options(){
 	sprite_typhoon = Sprite::create("Images/typhoon_001_34.png");
 	sprite_typhoon->getTexture()->setAliasTexParameters();
 	sprite_typhoon->setScale(SCALE_RATE);
-
-	typhoon_damage = UserInfoSingleton::getInstance()->get_damage();
-	typhoon_radius = UserInfoSingleton::getInstance()->get_radius();
+	UserInfoSingleton::getInstance()->set_radius(SCALEUP_VALUE(sprite_typhoon->getContentSize().width / 2.0));
 	
-	attack_delay = UserInfoSingleton::getInstance()->get_delay();
-	typhoon_velocity = UserInfoSingleton::getInstance()->get_velocity();
-
+	
+	update_status();
+	
 	this->addChild(sprite_typhoon, 1);
 }
 
@@ -85,13 +83,18 @@ void Typhoon::set_position(){
 
 void Typhoon::update_status(){
 	typhoon_damage = UserInfoSingleton::getInstance()->get_damage();
-	typhoon_radius = SCALEUP_VALUE(sprite_typhoon->getContentSize().width / 2.0);
-	UserInfoSingleton::getInstance()->set_radius(typhoon_radius);
+	typhoon_radius = UserInfoSingleton::getInstance()->get_radius();
 	attack_delay = UserInfoSingleton::getInstance()->get_delay();
 	typhoon_velocity = UserInfoSingleton::getInstance()->get_velocity();
 }
 
 bool Typhoon::check_hit(Rect input){
-	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), this->typhoon_radius);
-	//log("x = %f, y = %f", this->getPosition().x, this->getPosition().y);
+
+	//this->typhoon_radius;
+	//this->sprite_typhoon->getPosition().x;
+	//this->sprite_typhoon->getPosition().y;
+
+	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), SCALEUP_VALUE(this->typhoon_radius));
+
+
 }

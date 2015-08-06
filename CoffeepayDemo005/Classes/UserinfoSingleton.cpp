@@ -20,7 +20,7 @@ void UserInfoSingleton::init_values(){
 	exp = 0;
 	stage_number = 1;
 
-	typhoon_damage = 2;
+	typhoon_damage = UpgradeDB::get_UpgradeValue_power(0);
 	typhoon_delay = 20;
 	typhoon_velocity = 50.0f;
 	typhoon_radius = SCALEUP_VALUE(22);
