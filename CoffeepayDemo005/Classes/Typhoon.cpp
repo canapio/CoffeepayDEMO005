@@ -14,7 +14,7 @@ Typhoon* Typhoon::create(){
 }
 
 void Typhoon::init_options(){
-	sprite_typhoon = Sprite::create("Images/demo_typhoon001.png");
+	sprite_typhoon = Sprite::create("Images/typhoon_001_34.png");
 	sprite_typhoon->getTexture()->setAliasTexParameters();
 	sprite_typhoon->setScale(SCALE_RATE);
 
