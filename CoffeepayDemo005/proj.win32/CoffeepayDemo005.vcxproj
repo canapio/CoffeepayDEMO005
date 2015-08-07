@@ -149,6 +149,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\GameStartScene.cpp" />
     <ClCompile Include="..\Classes\LayoutSingleton.cpp" />
     <ClCompile Include="..\Classes\Typhoon.cpp" />
+    <ClCompile Include="..\Classes\TyphoonController.cpp" />
     <ClCompile Include="..\Classes\TyphoonMovement.cpp" />
     <ClCompile Include="..\Classes\StoreController.cpp" />
     <ClCompile Include="..\Classes\StoreUI.cpp" />
@@ -167,6 +168,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\GameStartScene.h" />
     <ClInclude Include="..\Classes\LayoutSingleton.h" />
     <ClInclude Include="..\Classes\Typhoon.h" />
+    <ClInclude Include="..\Classes\TyphoonController.h" />
     <ClInclude Include="..\Classes\TyphoonMovement.h" />
     <ClInclude Include="..\Classes\StoreController.h" />
     <ClInclude Include="..\Classes\StoreUI.h" />

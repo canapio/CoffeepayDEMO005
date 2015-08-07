@@ -26,7 +26,7 @@ void TyphoonMovement::move_to_location(Point target_point) {
     float time = distance_start_end / typhoon->get_velocity();
     time /= scale;
     
-    log("target_point : %f, %f", target_point.x, target_point.y);
+   // log("target_point : %f, %f", target_point.x, target_point.y);
     auto action = EaseExponentialInOut::create(MoveTo::create(time, target_point));
     
     typhoon->runAction(action);

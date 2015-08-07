@@ -31,7 +31,7 @@ bool GameScene::init()
 
 	//배경 설정
 	background_game = Sprite::create("Images/demo_concept002_003@3x.png");
-	log("sprite %p", background_game);
+	//log("sprite %p", background_game);
 	Size visibleSize = layout_singleton->get_original_device_size();
 	Size img_size = background_game->getContentSize();
 	background_game->setScale(visibleSize.width / img_size.width, visibleSize.height / img_size.height);
@@ -138,7 +138,7 @@ bool GameScene::onTouchBegan(Touch* touch, Event* event) {
 	auto target = event->getCurrentTarget();
 	Point location = target->convertToNodeSpace(touch->getLocation());
 	typhoon->stopAllActions();
-	log("touch began %f, %f", location.x, location.y);
+	//log("touch began %f, %f", location.x, location.y);
 	
 	
 	return true;
@@ -156,7 +156,7 @@ void GameScene::onTouchEnded(Touch *touch, Event *unused_event) {
 
 	//auto userrect = new Rect(typhoon->getPosition().x - typhoon->getContentSize().width / 2.0f, typhoon->getPosition().y - typhoon->getContentSize().height/2.0f, typhoon->getContentSize().width, typhoon->getContentSize().height);
 	
-	log("touch ended %f, %f", location.x, location.y);
+	//log("touch ended %f, %f", location.x, location.y);
 	float scale = 2.0;
 	if (location.x > LayoutSingleton::getInstance()->get_original_device_size().width - SCALEUP_VALUE(55)){}
 	else{
@@ -174,5 +174,5 @@ void GameScene::onTouchCancelled(Touch *touch, Event *unused_event) {
 	auto target = unused_event->getCurrentTarget();
 	Point location = target->convertToNodeSpace(touch->getLocation());
 
-	log("touch cancelled %f, %f", location.x, location.y);
+	//log("touch cancelled %f, %f", location.x, location.y);
 }

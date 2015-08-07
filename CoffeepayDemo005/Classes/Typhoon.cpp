@@ -18,7 +18,7 @@ void Typhoon::init_options(){
 	sprite_typhoon->getTexture()->setAliasTexParameters();
 	sprite_typhoon->setScale(SCALE_RATE);
 	UserInfoSingleton::getInstance()->set_radius(SCALEUP_VALUE(sprite_typhoon->getContentSize().width / 2.0));
-	
+	typhoon_radius = UserInfoSingleton::getInstance()->get_radius();
 	
 	update_status();
 	
@@ -30,7 +30,7 @@ Sprite* Typhoon::get_sprite(){
 }
 
 void Typhoon::set_damage(int input){
-	this->typhoon_damage = input;
+	typhoon_damage = input;
 }
 
 int Typhoon::get_damage(){
@@ -38,7 +38,7 @@ int Typhoon::get_damage(){
 }
 
 void Typhoon::set_velocity(float input){
-	this->typhoon_velocity = input;
+	typhoon_velocity = input;
 }
 
 float Typhoon::get_velocity(){
@@ -54,7 +54,7 @@ int Typhoon::get_delay(){
 }
 
 void Typhoon :: set_radius(float input){
-	this->typhoon_radius = input;
+	typhoon_radius = input;
 }
 
 float Typhoon::get_radius(){
@@ -68,34 +68,21 @@ void Typhoon::set_position(){
 	int visible_width = LayoutSingleton::getInstance()->get_original_device_size().width;
 	int visible_height = LayoutSingleton::getInstance()->get_original_device_size().height;
 	
-	
 	this->setPosition(visible_width / 2 , visible_height / 2 );
 	this->sprite_typhoon->setPosition(0,0);
 
-	/*
-	bound = LayerColor::create(Color4B(0, 255, 0, 100),
-		SCALEUP_VALUE(sprite_typhoon->getContentSize().width),
-		SCALEUP_VALUE(sprite_typhoon->getContentSize().height));
-	bound->setPosition(visible_width / 2 - SCALEUP_VALUE(sprite_typhoon->getContentSize().width / 2), 
-		visible_height / 2 - SCALEUP_VALUE(sprite_typhoon->getContentSize().height) / 2);
-		*/
 }
 
 void Typhoon::update_status(){
 	typhoon_damage = UserInfoSingleton::getInstance()->get_damage();
-	typhoon_radius = UserInfoSingleton::getInstance()->get_radius();
+	//typhoon_radius = UserInfoSingleton::getInstance()->get_radius();
 	attack_delay = UserInfoSingleton::getInstance()->get_delay();
 	typhoon_velocity = UserInfoSingleton::getInstance()->get_velocity();
 }
 
 bool Typhoon::check_hit(Rect input){
-
-	//this->typhoon_radius;
-	//this->sprite_typhoon->getPosition().x;
-	//this->sprite_typhoon->getPosition().y;
-
-	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), SCALEUP_VALUE(this->typhoon_radius));
-
+	
+	return input.intersectsCircle(Vec2(this->getPosition().x, this->getPosition().y), SCALEUP_VALUE(typhoon_radius));
 
 }
 void Typhoon::rotate_typhoon(float not_use){
