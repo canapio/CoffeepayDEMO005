@@ -4,7 +4,7 @@
 #include <cocos2d.h>
 #include "LayoutSingleton.h"
 #include "UserInfoSingleton.h"
-
+#define typhoon_rotate_time 2.0f
 USING_NS_CC;
 
 class Typhoon : public Layer{
@@ -15,10 +15,10 @@ private:
 	int attack_delay;
 	float typhoon_radius;
 	float typhoon_velocity;
-
-	void init_options();
+	RotateBy* action_rotate;
+	
 public:
-
+	void init_options();
 	static Typhoon* create();
 	LayerColor* bound;
 	Sprite* get_sprite();
@@ -41,5 +41,6 @@ public:
 	void update_status();
 
 	void set_position();//중앙(초기위치) 설정할때 1번 쓰일거라 예상
+	void rotate_typhoon(float not_use);
 };
 #endif

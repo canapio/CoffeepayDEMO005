@@ -85,7 +85,10 @@ bool GameScene::init()
 
 
 void GameScene::start_schedule(){
-	this->schedule(schedule_selector(GameScene::display_new_enemy), 1.0);
+	auto rotate_typhoon_one_time = RotateBy::create(typhoon_rotate_time, -360.0f);
+	typhoon->get_sprite()->runAction(rotate_typhoon_one_time);//맨처음 한바퀴 돌리는거 실행(스케쥴들이 딜레이 이후 돌아가길레)
+	this->schedule(schedule_selector(GameScene::rotate_typhoon_schedule), typhoon_rotate_time);
+	this->schedule(schedule_selector(GameScene::display_new_enemy), 1.0f);
 	this->schedule(schedule_selector(GameScene::change_button_enable), 0.1f);
 	this->schedule(schedule_selector(GameScene::display_money_label), 0.1f);
 	this->schedule(schedule_selector(GameScene::check_hit_schedule), 0.05f);
@@ -112,7 +115,9 @@ void GameScene::check_hit_schedule(float not_use){
 	collision_controller->check_collision(typhoon, enemy_controller);
 }
 
-
+void GameScene::rotate_typhoon_schedule(float not_use){
+	this->typhoon->rotate_typhoon(0.0);
+}
 
 
 

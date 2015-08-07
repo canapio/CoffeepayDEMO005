@@ -49,7 +49,7 @@ public:
 	void display_new_enemy(float dt);
 	void change_button_enable(float dt);
 	void display_money_label(float dt);
-
+	void rotate_typhoon_schedule(float not_use);
 	void check_hit_schedule(float not_use);
 };
 

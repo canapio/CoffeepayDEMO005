@@ -17,6 +17,7 @@ public:
 	void print_enemy(Enemy* input);
 	void add_enemy();
 	void beAttacked(float not_use);
+	
 };
 
 #endif

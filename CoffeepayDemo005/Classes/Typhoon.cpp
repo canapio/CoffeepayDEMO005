@@ -98,3 +98,7 @@ bool Typhoon::check_hit(Rect input){
 
 
 }
+void Typhoon::rotate_typhoon(float not_use){
+	this->action_rotate = RotateBy::create(2.0f, -360.0f);
+	this->sprite_typhoon->runAction(action_rotate);
+}
