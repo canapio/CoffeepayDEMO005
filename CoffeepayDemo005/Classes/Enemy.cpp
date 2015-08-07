@@ -101,6 +101,9 @@ void Enemy::set_position(){
 		if (random_x > LayoutSingleton::getInstance()->get_original_device_size().width - SCALEUP_VALUE(55)){
 			is_right_position = false;
 		}
+		else if (random_y > SCALEUP_VALUE(155) || random_y < SCALEUP_VALUE(5)){
+			is_right_position = false;
+		}
 		else{
 			is_right_position = true;
 		}

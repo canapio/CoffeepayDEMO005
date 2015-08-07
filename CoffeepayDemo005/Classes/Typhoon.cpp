@@ -61,6 +61,14 @@ float Typhoon::get_radius(){
 	return typhoon_radius;
 }
 
+void Typhoon::set_level(int input){
+	this->typhoon_level = input;
+}
+
+int Typhoon::get_level(){
+	return typhoon_level;
+}
+
 
 
 void Typhoon::set_position(){
@@ -86,6 +94,7 @@ void Typhoon::update_status(){
 	typhoon_radius = UserInfoSingleton::getInstance()->get_radius();
 	attack_delay = UserInfoSingleton::getInstance()->get_delay();
 	typhoon_velocity = UserInfoSingleton::getInstance()->get_velocity();
+	typhoon_level = UserInfoSingleton::getInstance()->get_typhoon_level();
 }
 
 bool Typhoon::check_hit(Rect input){

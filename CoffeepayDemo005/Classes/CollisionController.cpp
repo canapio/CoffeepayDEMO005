@@ -20,6 +20,7 @@ void CollisionController::check_collision(Typhoon* input_ty, EnemyController* in
 
 					UserInfoSingleton::getInstance()->add_money_value(en->get_property()->money);
 					UserInfoSingleton::getInstance()->add_exp(en->get_property()->exp);
+					UserInfoSingleton::getInstance()->check_level_up();
 					input_ec->delete_enemy(en);
 					input_ec->get_vector()->eraseObject(en);
 

@@ -20,6 +20,7 @@ void UserInfoSingleton::init_values(){
 	exp = 0;
 	stage_number = 1;
 
+	typhoon_level = 1;
 	typhoon_damage = UpgradeDB::get_UpgradeValue_power(0);
 	typhoon_delay = 20;
 	typhoon_velocity = 50.0f;
@@ -28,4 +29,12 @@ void UserInfoSingleton::init_values(){
 	lv_attack_delay = 0;
 	lv_attack_power = 0;
 	lv_velocity = 0;
+}
+
+void UserInfoSingleton::check_level_up(){
+
+	log("%d", exp);
+	if (170 < exp){
+		typhoon_level = 2;
+	}
 }

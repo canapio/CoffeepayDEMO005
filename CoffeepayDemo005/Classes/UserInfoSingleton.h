@@ -19,6 +19,7 @@ private:
 	int exp;
 	int stage_number;
 
+	int typhoon_level;
 	float typhoon_radius;
 	int typhoon_damage;
 	float typhoon_velocity;
@@ -31,6 +32,9 @@ public:
 	static void releaseInstance();
 	
 	void init_values();
+
+	void set_typhoon_level(int input) { typhoon_level = input; }
+	int get_typhoon_level(){ return typhoon_level; }
 
 	void set_damage(int input){ typhoon_damage = input; };
 	void add_damage(int input){ typhoon_damage += input; };
@@ -70,6 +74,7 @@ public:
 
 	int lv_attack_power, lv_attack_delay, lv_velocity;
 
+	void check_level_up();
 };
 
 #endif

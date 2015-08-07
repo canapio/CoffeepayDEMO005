@@ -1,15 +1,30 @@
 #include "EnemyController.h"
 //#include "Enemy.h"
 void EnemyController::add_enemy(){
-	int random_number = RandomHelper::random_int(1, 6);
-	random_number = random_number % 4;
-	while (random_number == 0){
-		
-		random_number = RandomHelper::random_int(1, 6);
-		random_number = random_number % 4;
+	int level = UserInfoSingleton::getInstance()->get_typhoon_level();
+	int rand_start, rand_end, rand_real_end;
+
+	if (level == 1){
+		rand_start = 1;
+		rand_end = 5;
+		rand_real_end = 2;
+	}
+	else if (level == 2){
+		rand_start = 2;
+		rand_end = 4;
+		rand_real_end = 3;
+	}
+	
+	int random_number = RandomHelper::random_int(rand_start, rand_end);
+
+	if (random_number < rand_real_end){
+		random_number = rand_real_end;
+	}
+	else {
+		random_number = rand_start;
 	}
 
-	
+
 
 	Enemy* temp = Enemy::create(random_number);
 	if (this->vec_enemy.size() <= 50){

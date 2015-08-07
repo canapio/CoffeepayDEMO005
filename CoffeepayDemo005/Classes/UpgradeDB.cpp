@@ -11,14 +11,14 @@ int UpgradeDB::get_UpgradeValue_power(int lv)
 }
 
 int UpgradeDB::get_need_money_velocity(int lv){
-	return (int)pow(5, lv) / 2;
+	return (int)pow(9, lv) / 2;
 }
 
 int UpgradeDB::get_need_money_delay(int lv){
-	return (int)pow(5, lv) / 2;
+	return (int)pow(11, lv) / 2;
 }
 
 
 int UpgradeDB::get_need_money_power(int lv){
-	return (int)pow(4, lv) / 3;
+	return (int)pow(lv, 4) - lv * 3 + 4;
 }
