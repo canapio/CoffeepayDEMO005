@@ -16,6 +16,8 @@ private:
 	float typhoon_radius;
 	float typhoon_velocity;
 	RotateBy* action_rotate;
+
+	int typhoon_level;
 	
 public:
 	void init_options();
@@ -36,11 +38,16 @@ public:
 	void set_radius(float input);
 	float get_radius();
 
+	void set_level(int input);
+	int get_level();
+
 	bool check_hit(Rect input);
 
 	void update_status();
 
 	void set_position();//중앙(초기위치) 설정할때 1번 쓰일거라 예상
 	void rotate_typhoon(float not_use);
+
+
 };
 #endif

@@ -3,7 +3,7 @@
 
 
 void StoreController::to_next_attack_power(){
-	user_info->add_damage(UpgradeDB::get_UpgradeValue_power(user_info->lv_attack_power + 1));
+	user_info->set_damage(UpgradeDB::get_UpgradeValue_power(user_info->lv_attack_power + 1));
 	user_info->add_money_value(-UpgradeDB::get_need_money_power(user_info->lv_attack_power + 1));
 	user_info->lv_attack_power++;
 }

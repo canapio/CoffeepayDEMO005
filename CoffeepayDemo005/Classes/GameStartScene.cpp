@@ -98,11 +98,6 @@ bool GameStartScene::onTouchBegan(Touch* touch, Event* event) {
 	
 	//log("%f", typhoon->get_sprite()->getBoundingBox().size.width);
 	
-	if (typhoon->getBoundingBox().containsPoint(touch->getLocation())){
-		is_typhoon_touched = true;
-		log("touch began typhoon");
-	}
-	
 	return true;
 }
 void GameStartScene::onTouchMoved(Touch *touch, Event *unused_event) {
@@ -119,30 +114,23 @@ void GameStartScene::onTouchEnded(Touch *touch, Event *unused_event) {
 	//auto userrect = new Rect(typhoon->getPosition().x - typhoon->getContentSize().width / 2.0f, typhoon->getPosition().y - typhoon->getContentSize().height/2.0f, typhoon->getContentSize().width, typhoon->getContentSize().height);
 
 	log("touch ended %f, %f", location.x, location.y);
-	
-	if (typhoon->getBoundingBox().containsPoint(touch->getLocation())){
-		if (is_typhoon_touched){
-			log("touch ended typhoon");
-			//auto game_scene = GameScene::createScene();
-			//Director::getInstance()->replaceScene(game_scene);
-			auto action = MoveTo::create(2.0f, Point(layout_singleton->get_original_device_size().width / 2.0f, layout_singleton->scaleup_value(80)));
-			typhoon->get_sprite()->runAction(action);
 
-			//auto action_bg = Sequence::create(FadeOut::create(2.1f),CallFunc::create(CC_CALLBACK_1(GameStartScene::view_game_scene,this)),NULL);
-			auto action_bg = FadeOut::create(2.0f);
-			auto action_tran = CallFunc::create(CC_CALLBACK_0(GameStartScene::view_game_scene, this));
-			auto seq = Sequence::create(action_bg, action_tran, NULL);
-			background->runAction(seq);
+	log("touch ended typhoon");
+	//auto game_scene = GameScene::createScene();
+	//Director::getInstance()->replaceScene(game_scene);
+	auto action = EaseExponentialInOut::create( MoveBy::create(2.0f, Point(layout_singleton->get_original_device_size().width / 2.0f, 0)));
+	typhoon->get_sprite()->runAction(action);
 
-			//this->view_game_scene();
-		}
-	}
-	else{
-		is_typhoon_touched = false;
-	}
-	
-	
-	
+	//auto action_bg = Sequence::create(FadeOut::create(2.1f),CallFunc::create(CC_CALLBACK_1(GameStartScene::view_game_scene,this)),NULL);
+	auto action_bg = FadeOut::create(2.0f);
+	auto action_tran = CallFunc::create(CC_CALLBACK_0(GameStartScene::view_game_scene, this));
+	auto seq = Sequence::create(action_bg, action_tran, NULL);
+	background->runAction(seq);
+
+	//this->view_game_scene();
+
+
+
 }
 
 void GameStartScene::onTouchCancelled(Touch *touch, Event *unused_event) {
