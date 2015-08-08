@@ -74,7 +74,9 @@ public:
 
 	int lv_attack_power, lv_attack_delay, lv_velocity;
 
+	//지워야함 - 태풍 컨트롤러 로 옮김
 	void check_level_up();
+
 };
 
 #endif

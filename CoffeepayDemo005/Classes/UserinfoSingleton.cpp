@@ -31,6 +31,7 @@ void UserInfoSingleton::init_values(){
 	lv_velocity = 0;
 }
 
+//ÀÓ½Ã·Î ¸¸µë’Ì¹Çµëµë
 void UserInfoSingleton::check_level_up(){
 
 	log("%d", exp);
